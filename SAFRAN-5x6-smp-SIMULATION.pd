@@ -1,0 +1,2 @@
+#N canvas 2025 436 670 284 12;
+#X obj 28 65 abs/sim-chims smps;
