@@ -1,4 +1,4 @@
-#N canvas 2079 230 1038 643 12;
+#N canvas 747 272 1038 643 12;
 #N canvas 606 290 1023 526 SIM 0;
 #X obj 10 20 synth-arm 0;
 #X obj 35 20 synth-arm 1;
@@ -56,6 +56,9 @@
 #X msg 802 90 30;
 #X msg 631 575 \; pd-SIM obj \$1 \$2 sim-arm \$3 \$4;
 #X msg 307 545 \; pd-SIM obj \$1 \$2 synth-arm \$3;
+#X obj 89 428 text define -k ARMS-GROUPS;
+#A set 4 5 10 11 16 17 22 23 28 29 \; 2 3 8 9 14 15 20 21 26 27 \;
+0 1 6 7 12 13 18 19 24 25 \;;
 #X connect 1 2 4 0;
 #X connect 3 0 15 0;
 #X connect 4 0 9 0;
