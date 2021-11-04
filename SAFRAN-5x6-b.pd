@@ -1,4 +1,4 @@
-#N canvas 2359 64 1392 1014 12;
+#N canvas 526 64 1392 985 12;
 #X declare -path abs;
 #N canvas 1991 426 686 471 MOUVEMENTS 0;
 #X obj 50 64 inlet motifcount;
@@ -19,7 +19,7 @@
 #X obj 135 357 outlet \$0-BG-MOV;
 #X obj 288 357 outlet nb-of-moti;
 #X obj 249 186 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 9 256;
+-262144 -1 -1 0 256;
 #X obj 187 88 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 142 199 int;
@@ -69,7 +69,7 @@
 #X obj 145 284 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 126 417 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 2 256;
+-262144 -1 -1 0 256;
 #X obj 185 420 t b f b;
 #X msg 203 322 set \$1;
 #X msg 283 322 max \$1;
@@ -84,10 +84,10 @@
 #X obj 202 34 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 342 44 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 14 256;
+-262144 -1 -1 30 256;
 #X obj 171 189 f 30;
 #X obj 311 274 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 14 256;
+-262144 -1 -1 0 256;
 #X obj 185 486 f 0;
 #X obj 429 15 inlet shot;
 #X obj 187 382 cyclone/counter 2 0 1;
@@ -334,11 +334,11 @@
 #X obj 365 424 *~ 3;
 #X obj 305 485 *~;
 #X obj 270 314 nbx 5 14 -1e+37 1e+37 0 0 empty empty F1 0 -8 0 10 -262130
--1 -1 0.333333 256;
+-1 -1 0 256;
 #X obj 330 314 nbx 5 14 -1e+37 1e+37 0 0 empty empty F2 0 -8 0 10 -262130
--1 -1 4 256;
+-1 -1 0 256;
 #X obj 390 314 nbx 5 14 -1e+37 1e+37 0 0 empty empty F3 0 -8 0 10 -262130
--1 -1 7.5 256;
+-1 -1 0 256;
 #X obj 458 622 f;
 #X obj 339 565 threshold~ 0 125;
 #X obj 600 366 rzero~ 1;
@@ -407,9 +407,9 @@
 #X obj 456 197 r \$0-TRIG;
 #X obj 474 262 r \$0-BANG-PHASE-MOTIF;
 #X obj 546 124 vsl 15 50 0 1 0 0 empty \$0-LFO2 LFO2 0 -9 0 10 -262130
--1 -1 274 1;
+-1 -1 0 1;
 #X obj 510 124 vsl 15 50 0 1 0 0 empty \$0-LFO1 LFO1 0 -9 0 10 -262130
--1 -1 1726 1;
+-1 -1 0 1;
 #X obj 594 332 s \$0-BG-MOV;
 #X text 506 36 \$0-TRIG;
 #X text 506 56 \$0-VEL-MOTIF;
@@ -417,7 +417,7 @@
 #X text 465 62 Send;
 #X text 465 131 Send;
 #X obj 586 124 vsl 15 50 0 1 0 0 empty \$0-LFO3 LFO3 0 -9 0 10 -262130
--1 -1 2002 1;
+-1 -1 0 1;
 #X obj 626 124 vsl 15 50 0 1 0 0 empty \$0-VEL-MOTIF VEL-MOTIF 0 -9
 0 10 -262130 -1 -1 0 1;
 #N canvas 2167 328 398 317 LFO1 0;
@@ -432,7 +432,7 @@
 #X obj 31 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 130 135 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 -0.037037 256;
+-262144 -1 -1 0 256;
 #X obj 201 194 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 103 47 f;
@@ -466,7 +466,7 @@
 #X obj 31 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 130 135 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 -0.00529101 256;
+-262144 -1 -1 0 256;
 #X obj 103 47 f;
 #X obj 186 51 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
@@ -499,7 +499,7 @@
 #X obj 31 110 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 130 135 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 -0.148148 256;
+-262144 -1 -1 0 256;
 #X obj 103 47 f;
 #X obj 186 51 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
@@ -592,7 +592,7 @@
 #X obj 75 293 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 293 210 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 5 256;
+-262144 -1 -1 0 256;
 #X msg 291 107 2;
 #X obj 235 76 r \$0-stop;
 #X obj 345 82 r \$0-start;
@@ -635,7 +635,7 @@
 #X obj 311 263 cyclone/counter 0 0 3;
 #X obj 472 142 - 1;
 #X obj 96 432 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 3 256;
+-262144 -1 -1 0 256;
 #X obj 136 370 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 311 80 r \$0-BG-MOV;
@@ -645,14 +645,14 @@
 -262144 -1 -1 0 256;
 #X obj 311 375 % 255;
 #X obj 306 411 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 3 256;
+-262144 -1 -1 0 256;
 #X obj 479 308 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj 537 162 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X msg 438 50 2;
 #X obj 238 325 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 3 256;
+-262144 -1 -1 0 256;
 #X obj 171 434 text get \$0-routing;
 #X msg 465 212 7;
 #X obj 267 222 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -696,7 +696,7 @@
 #X connect 34 1 12 1;
 #X restore 456 360 pd ROUTING;
 #X obj 562 354 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 9 256;
+-262144 -1 -1 0 256;
 #X obj 105 872 text define -k \$0-routing;
 #A set 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23
 24 25 26 27 28 29 \; 23 28 14 25 3 29 21 12 6 0 27 10 11 2 26 1 9 16
@@ -1059,7 +1059,7 @@
 #X obj 121 307 * 1;
 #X obj 101 504 % 30;
 #X obj 186 375 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 4 256;
+-262144 -1 -1 0 256;
 #X obj 147 74 t f f;
 #X obj 180 121 % 8;
 #X obj 147 224 unpack f f f;
@@ -1096,7 +1096,7 @@
 #N canvas 1 83 647 425 ROBOTSHIFT 0;
 #X obj 118 82 inlet;
 #X obj 161 203 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 1 256;
+-262144 -1 -1 0 256;
 #X obj 161 222 * 6;
 #X obj 143 251 +;
 #X obj 161 141 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -2517,14 +2517,14 @@
 #X obj 895 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X obj 860 164 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--228856 -1 -1 11 256;
+-228856 -1 -1 0 256;
 #X msg 715 66 jam 0;
 #X msg 964 84 max \$1;
 #X obj 859 135 cyclone/counter 0 0 8;
 #X obj 1021 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -228856
 -1 -1;
 #X obj 1059 84 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 11 256;
+-262144 -1 -1 0 256;
 #N canvas 1772 281 1106 609 presets 0;
 #X obj 424 352 nbx 3 20 5 1e+37 0 0 \$0-duree empty duree 0 -10 0 10
 -228856 -1 -1 5 256;
@@ -2553,11 +2553,11 @@
 #X obj 604 400 bng 21 250 50 0 \$0-alien-shot \$0-alien-shot-in Shot
 2 -10 0 10 -204786 -1 -1;
 #X obj 424 400 nbx 4 20 0 1000 0 0 \$0-alien-length \$0-alien-length-in
-length 0 -10 0 10 -204786 -1 -1 14 256;
+length 0 -10 0 10 -204786 -1 -1 30 256;
 #X obj 562 400 tgl 21 0 \$0-alien-mode \$0-alien-mode-in Mode 0 -10
 0 10 -204786 -1 -1 0 1;
 #X obj 493 400 nbx 4 20 0 1000 0 0 \$0-alien-speed \$0-alien-speed-in
-Speed 0 -10 0 10 -204786 -1 -1 64 256;
+Speed 0 -10 0 10 -204786 -1 -1 250 256;
 #X obj 275 362 r \$0-lb;
 #X msg 275 381 30;
 #X msg 323 381 250;
@@ -2618,6 +2618,7 @@ Speed 0 -10 0 10 -204786 -1 -1 64 256;
 #X obj 1021 162 s \$0-stop;
 #X obj 965 30 r \$0-preset;
 #X obj 1053 662 pack f 100;
+#X text 234 448 test;
 #X connect 0 0 2 0;
 #X connect 0 0 69 1;
 #X connect 0 1 1 0;
