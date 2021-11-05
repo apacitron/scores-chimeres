@@ -1,5 +1,4 @@
 # scores-chimeres
-//////////////////////////////////////////
 //
 // PUREDATA GENERATIVE SCORES V1 FOR CHIMERES ORCHESTRA
 // see data/params-generator-readme.txt for infos
