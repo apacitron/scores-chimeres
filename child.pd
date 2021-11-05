@@ -1,0 +1,9 @@
+#N canvas 1 96 501 180 10;
+#X obj 10 10 cnv 15 230 30 empty empty CHIMERES_ORCHESTRA 5 15 0 20
+-1 -262144 0;
+#X obj 241 10 cnv 15 230 30 empty empty CHILDREN 5 15 0 20 -195568
+-262144 0;
+#X text 9 47 Set static IP of the computer according ID mapping : 192.168.0.101
++ ID;
+#X text 224 96 Arguments \; \$1: devicename \; \$2: ID;
+#X obj 10 101 abs/child-serial /dev/ttyUSB0 0;

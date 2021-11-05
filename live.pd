@@ -1,0 +1,101 @@
+#N canvas 48 96 483 126 10;
+#X declare -path abs;
+#X obj 10 10 cnv 15 230 30 empty empty CHIMERES_ORCHESTRA 5 15 0 20
+-1 -262144 0;
+#X obj 241 10 cnv 15 230 30 empty empty LIVE 5 15 0 20 -195568 -262144
+0;
+#N canvas 247 58 523 249 -INIT- 0;
+#X obj 19 36 loadbang;
+#N canvas 464 134 430 343 -AUTO-BUILD- 0;
+#X obj 56 176 r NB_ARMS;
+#X obj 43 128 r NB_CHIMERES;
+#X obj 85 203 *;
+#X obj 28 199 f;
+#X obj 43 151 t f b f;
+#X obj 28 51 r AUTO_BUILD;
+#X obj 28 94 sel 1;
+#X obj 28 227 pack f f f;
+#X obj 28 73 change;
+#X msg 28 250 \; CHIMERES delete \; pd-main.pd obj 240 107 chimeres
+\$1 \$2 \$3 \;;
+#X text 27 10 Build [chimeres] abstraction automatically with NB_ARMS
+and NB_CHIMERES variables from "conf.txt";
+#X text 77 73 Skip multiple calls;
+#X connect 0 0 2 0;
+#X connect 0 0 7 1;
+#X connect 1 0 4 0;
+#X connect 2 0 7 2;
+#X connect 3 0 7 0;
+#X connect 4 0 3 1;
+#X connect 4 1 2 0;
+#X connect 4 2 2 1;
+#X connect 5 0 8 0;
+#X connect 6 0 3 0;
+#X connect 7 0 9 0;
+#X connect 8 0 6 0;
+#X restore 256 110 pd -AUTO-BUILD-;
+#N canvas 485 184 449 218 -LOAD-CONF- 0;
+#X msg 31 146 line 0 \, bang;
+#X obj 31 77 t b b;
+#X text 28 7 Load conf.txt file for general settings;
+#X text 188 168 Send messages with "-g";
+#X msg 58 101 read conf.txt;
+#X obj 31 32 r CONF;
+#X obj 31 54 route load;
+#X obj 58 122 text define \$0-CONF;
+#X obj 31 167 text sequence \$0-CONF -g;
+#X text 242 47 Avoid missing messages;
+#X obj 244 72 tgl 15 0 REMOTE_LOCAL REMOTE_LOCAL REMOTE_LOCAL 17 7
+0 10 -262144 -1 -1 0 1;
+#X obj 244 112 tgl 15 0 CLOCK_AUTO CLOCK_AUTO CLOCK_AUTO 17 7 0 10
+-262144 -1 -1 0 1;
+#X obj 244 93 tgl 15 0 CLOCK CLOCK CLOCK 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 353 75 r CLOCK_START;
+#X obj 354 99 r CLOCK_END;
+#X connect 0 0 8 0;
+#X connect 1 0 0 0;
+#X connect 1 1 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 1 0;
+#X restore 256 88 pd -LOAD-CONF-;
+#X obj 19 59 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 19 124 delay 1000;
+#X text 16 16 Start sequence;
+#X text 254 14 Include libraries and paths;
+#N canvas 1 58 550 300 -GUI- 0;
+#X obj 36 77 r \$0-open-setup;
+#X obj 36 125 pdcontrol;
+#X msg 36 100 dir 0;
+#X text 35 56 Open setup;
+#X obj 217 75 r \$0-open-compozer;
+#X msg 217 120 \; pd-compozer.pd vis 1;
+#X msg 36 150 \; pd open setup.pd \$1/abs;
+#X connect 0 0 2 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 4 0 5 0;
+#X restore 256 133 pd -GUI-;
+#X obj 256 33 declare -path abs;
+#X text 357 110 > [chimeres];
+#X text 128 160 Chimeres settings;
+#X msg 39 82 \; CONF load \;;
+#X text 128 91 conf.txt;
+#X msg 36 152 \; SETTINGS load;
+#X connect 0 0 3 0;
+#X connect 3 0 4 0;
+#X connect 3 0 11 0;
+#X connect 4 0 13 0;
+#X restore 240 44 pd -INIT-;
+#X obj 130 45 bng 15 250 50 0 \$0-open-setup \$0-open-setup-in setup
+17 7 0 10 -228856 -1 -1;
+#X obj 10 45 tgl 15 0 DEBUG DEBUG DEBUG 17 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 10 65 tgl 15 0 CONNECT CONNECT CONNECT 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 240 66 compozer;
+#X obj 130 65 bng 15 250 50 0 \$0-open-compozer \$0-open-compozer compozer
+17 7 0 10 -228856 -1 -1;
+#X obj 240 87 chimeres 5 6 30;

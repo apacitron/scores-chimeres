@@ -1,0 +1,6 @@
+#N canvas 96 626 496 265 12;
+#X obj 12 49 sim-chims;
+#X text 122 10 regenerate needs NB_ARMS & NB_CHIMERES infos from [install.pd]
+;
+#X obj 12 23 bng 15 250 50 0 empty empty regererate 17 7 0 10 -262144
+-1 -1;
